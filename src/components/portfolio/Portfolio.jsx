@@ -45,7 +45,7 @@ const Portfolio = () => {
       </ul>
       <div className="container-projets">
       {data.map((projet) => (
-        <div className="projets-item">
+        <div className="projets-item" key={projet.id}>
             <img src={projet.img} 
                  alt='' 
                  />
