@@ -1,0 +1,56 @@
+/* :root {
+    --font-text: 1.5rem;
+    --font-size-logo: 40px;
+    --color-font: white;
+    --color-green: #BAC964;
+    --color-orange: #FFA500;
+    --bg-principal: #000;
+  } */
+.menu{
+    width: 300px;
+    height: 100vh;
+    background-color: var(--bg-menuNav);
+    color: var(--color-orange);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    
+    
+}
+
+
+.menu.active{
+    right: 0;
+}
+
+.menuHamburguer{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-shadow: -2px 4px 1px #767474;
+    width: 70%;
+    
+}
+.menuHamburguer li{
+    margin-bottom: 25px;
+    
+}
+.menuLink{
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;  
+}
+.menuLink:hover{
+    color: var(--color-green);
+    font-weight: 900;
+}

@@ -1,0 +1,24 @@
+:root {
+    --font-text: 1.5rem;
+    --font-size-logo: 40px;
+    --color-font: white;
+    --color-green: #BAC964;
+    --color-orange: #FFA500;
+    --bg-principal: #000;
+    --bg-secondary: #333333;
+    --bg-menuNav: white;
+  }
+.portfolioList{
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: .2em;
+}
+
+.portfolioList.activePortfolio{
+    color:var(--color-orange);
+    background-color: var(--bg-principal);
+}

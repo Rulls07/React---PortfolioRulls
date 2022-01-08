@@ -1,3 +1,88 @@
+:root {
+    --font-text: 1.5rem;
+    --font-size-logo: 40px;
+    --color-font: white;
+    --color-green: #BAC964;
+    --color-orange: #FFA500;
+    --bg-principal: #000;
+    --bg-secondary: #333333;
+    --bg-menuNav: white;
+  }
 .portfolio{
-    background-color: lime;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    scroll-snap-align: start;
+    background-color: var(--bg-secondary);
+    color: var(--color-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.portfolio h1{
+    font-size: 50px;
+}
+
+.portfolio ul{
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.portfolio ul li{
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: .2em;
+}
+
+.portfolio ul li.active-portfolio{
+    background-color: var(--bg-principal);
+}
+
+.portfolio .container-projets{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .container-projets .projets-item{
+    width: 220px;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.portfolio .container-projets .projets-item h3{
+    position: absolute;
+    font-size: 20px;
+}
+
+.portfolio .container-projets .projets-item img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 1;
+}
+.portfolio .container-projets .projets-item img:hover{
+    background-color: var(--bg-principal);
+opacity: 0.2;
+ }
+/* .projets-item{
+    width: 220px;
+    height: 150px;
+    border-radius: 20px;
+} */

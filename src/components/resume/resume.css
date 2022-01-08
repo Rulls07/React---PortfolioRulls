@@ -1,7 +1,7 @@
-.works{
+.resume{
     width: 100vw;
     height: calc(100vh - 70px);
     scroll-snap-align: start;
-    background-color: var(--bg-principal);
+    background-color: var(--bg-secondary);
     color: var(--color-font);
 }

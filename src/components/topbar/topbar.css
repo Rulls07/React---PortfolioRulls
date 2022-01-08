@@ -1,3 +1,95 @@
-.topbar{
-    background-color: lightsalmon;
+:root {
+  --font-text: 1.5rem;
+  --font-size-logo: 40px;
+  --color-font: white;
+  --color-green: #BAC964;
+  --color-orange: #FFA500;
+  --bg-principal: #000;
+  --bg-secondary: #333333;
+  --bg-menuNav: white;
+}
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: var(--bg-principal);
+  color: var(--color-font);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+}
+
+.wrapper {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/** ************************* Topbar côté gauche **************************/
+.tb-left {
+  display: flex;
+  align-items: center;
+}
+.itemContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.logo {
+  font-size: var(--font-size-logo);
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 40px;
+  text-shadow: -2px 4px 1px #767474;
+}
+.logo:hover{
+    color: var(--color-green);
+    font-weight: 900;
+}
+
+.tb-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.itemContainer span{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/** ************************* Topbar côté droit **************************/
+.tb-right {
+    color: var(--color-font);
+  }
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 32px;
+    height: 25px;
+}
+
+.hamburguer span{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-font);
+    transform-origin: left;
+    transition: all 3s ease;
+}
+
+.active{
+    background-color: white;
+    color: var(--color-orange);
+}
+.active .hamburguer>span:first-child{
+    background-color: #000;
+    transform: rotate(45deg);
+}
+.active .hamburguer>span:nth-child(2){
+    opacity: 0;
+}
+.active .hamburguer>span:last-child{
+    background-color: #000;
+    transform: rotate(-45deg);
 }
