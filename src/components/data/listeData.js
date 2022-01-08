@@ -1,9 +1,5 @@
 export const liste = [
   {
-    id: "all",
-    title: "all",
-  },
-  {
     id: "html",
     title: "Html & CSS",
   },
