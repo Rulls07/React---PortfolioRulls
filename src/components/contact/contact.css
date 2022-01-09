@@ -82,7 +82,7 @@
   .c-right {
     flex: 1;
     background-color: var(--bg-principal);
-    border-top: 1px solid #fff ;
+    /* border-top: 1px solid #fff ; */
   }
 .c-title {
     font-size: 50px;

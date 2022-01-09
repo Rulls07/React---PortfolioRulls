@@ -1,7 +1,130 @@
+:root {
+    --font-text: 1.5rem;
+    --font-size-logo: 40px;
+    --color-font: white;
+    --color-green: #BAC964;
+    --color-orange1: #FF7F00;
+    --color-orange2: #FFA500;
+    --color-orange:#E05216;
+    --bg-principal: #000;
+    --bg-secondary: #333333;
+    --bg-menuNav: white;
+    --bg-menuNav2:#333333;
+  }
 .resume{
     width: 100vw;
     height: calc(100vh - 70px);
     scroll-snap-align: start;
     background-color: var(--bg-secondary);
     color: var(--color-font);
+    display: flex;
+    align-items: center;
 }
+
+.resume-left {
+    flex: 1;
+    background-color: var(--bg-principal);
+    /* border-top: 1px solid #fff ; */
+    height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%; */
+  }
+  
+  .resume-right {
+    height: 70%;
+    width: 70%;
+    flex: 1;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* background-color: #E05216; */
+  }
+
+  .resume-title {
+    font-weight: 400;
+  }
+  
+  .resume-sub {
+      width: 70%;
+    margin: 20px 0;
+  }
+  
+  .resume-desc, .resume-descLeft {
+    width: 70%;
+    font-weight: 300;
+  }
+/** ****************** Resume- left ****************** */
+.resume-section {
+  width: 100%;
+  margin: 40px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.resume-imgLeft {
+  width: 50px;
+  height: 35px;
+  border-radius: 20px;
+}
+.resume-textsLeft {
+  width: 70%;
+  margin: 0 20px;
+}
+
+.resume-titleLeft {
+    font-weight: bold;
+    /* color:#555; */
+    margin-bottom: 10px;
+}
+.containerEstrella{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 50px;
+}
+.resumeEstrella{
+  width: 30px;
+  margin: 10px 5px;
+}
+/** ****************** BTN - FORMS ****************** */
+  
+.btnHire {
+    border: none;
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    background-color: var(--color-green);
+    color: var(--color-font);
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0px 10px;
+
+  }
+  .btnHire:hover {
+    background-color: var(--bg-principal);
+  }
+
+.btnDownloadCv {
+    border: none;
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    background-color: var(--bg-principal);
+    color: var(--color-font);
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0px 10px;
+  }
+
+
+  .btnDownloadCv:hover {
+    background-color: var(--color-green);
+  }
