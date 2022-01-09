@@ -1,3 +1,16 @@
+:root {
+  --font-text: 1.5rem;
+  --font-size-logo: 40px;
+  --color-font: white;
+  --color-green: #BAC964;
+  --color-orange1: #FF7F00;
+  --color-orange2: #FFA500;
+  --color-orange:#E05216;
+  --bg-principal: #000;
+  --bg-secondary: #333333;
+  --bg-menuNav: white;
+  --bg-menuNav2:#333333;
+}
 .intro {
   width: 100vw;
   height: calc(100vh - 70px);
@@ -8,32 +21,34 @@
 }
 /** *************************  côté gauche **************************/
 
-.intro-left {
+.intro .left {
   flex: 0.5;
   overflow: hidden;
 }
 
-.imgContainer {
+.intro .left .imgContainer {
   width: 700px;
   height: 700px;
-  background-color: lightgray;
+  background-color: #333333;
   border-radius: 50%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   float: right;
 }
-.imgContainer img {
+
+.intro .left .imgContainer img {
   height: 90%;
 }
 
-/** ************************* Topbar côté droit **************************/
+ /** ************************* Topbar côté droit **************************/
 
-.intro-right {
+.intro .right {
   flex: 0.5;
   position: relative;
 }
-.intro-right .intro-wrapper {
+
+.intro .right .wrapper {
   width: 100%;
   height: 100%;
   padding-left: 50px;
@@ -41,44 +56,29 @@
   flex-direction: column;
   justify-content: center;
 }
-.intro-right a {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-}
 
-.intro-right a .intro-icon {
-  color: var(--color-orange);
-  font-weight: 900;
-  background-color: transparent;
-  width: 30px;
-  animation: move 2s infinite;
-  /* animation: move 2s ease-in-out infinite alternate; */
-}
-@keyframes move {
-  100% {
-    opacity: 0;
-  }
-}
-.intro-right .intro-wrapper h1 {
-  font-size: 60px;
+.intro .right .wrapper h1 {
+  font-size: 58px;
   margin: 10px 0;
 }
-.intro-right .intro-wrapper h2 {
+
+.intro .right .wrapper h2 {
   font-size: 35px;
 }
 
-.intro-right .intro-wrapper span {
-  text-shadow: -2px 4px 1px #767474;
-  font-weight: 900;
-  text-transform: uppercase;
+.intro .right .wrapper h3 {
   font-size: 30px;
-  color: var(--color-orange);
 }
 
-.ityped-cursor {
+.intro .right .wrapper h3 span {
+  font-size: inherit;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  /* text-shadow: -2px 4px 1px #767474; */
+  font-weight: 300;
+}
+
+.intro .right .wrapper h3 .ityped-cursor {
   animation: blink 1s infinite;
 }
 
@@ -86,6 +86,24 @@
   50% {
     opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro .right a {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+
+.intro .right a img {
+  width: 30px;
+  margin: 10px 5px;
+  animation: arrowBlink 2s infinite;
+}
+
+@keyframes arrowBlink {
   100% {
     opacity: 0;
   }

@@ -1,0 +1,11 @@
+:root {
+    --font-text: 1.5rem;
+    --font-size-logo: 40px;
+    --color-font: white;
+    --color-green: #BAC964;
+    --color-orange: #FFA500;
+    --bg-principal: #000;
+    --bg-secondary: #333333;
+    --bg-menuNav: white;
+    --bg-menuNav2: #333333;
+  }

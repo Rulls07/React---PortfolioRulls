@@ -1,38 +1,55 @@
-import React from "react";
+import React from 'react';
+import { useState } from "react";
+import { data } from "./../data/worksData";
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import "./works.css";
-import { Test } from "./../../img/mobile.png";
 
-const Works = () => {
+export default function Works() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const handleClick = (way) => {
+    way === "left"
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+      : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
+  };
+  
   return (
     <div className="works" id="works">
-      <div className="sliderWorks">
-        <div className="containerSlider">
-          <div className="sliderItem">
-            <div className="s-left">
-              <div className="leftContainer">
-                <div className="imgContainer">
-                  <img src={Test} alt="" />
+      <div
+        className="slider"
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+      >
+        {data.map((d) => (
+          <div className="container">
+            <div className="item">
+              <div className="left">
+                <div className="leftContainer">
+                  <div className="imgContainer">
+                    <img src={d.icon} alt="" key={d.id}/>
+                  </div>
+                  <h2>{d.title}</h2>
+                  <p>{d.desc}</p>
+                  <span><a href={d.link} target="_blank" className='veilleTech'>Veille Technologique</a></span>
                 </div>
-                <h2>Title</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Dicta molestiae, magnam quasi ad consequatur
-                </p>
-                <span>Projets</span>
+              </div>
+              <div className="right">
+                <img
+                //   src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
+                  src={d.img}
+                  alt="Veille Tech"
+                />
               </div>
             </div>
-            <div className="s-right">
-                <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
-                    alt=""
-                    />
-            </div>
           </div>
-        </div>
+        ))}
       </div>
-      <img src="img/arrow.png" className="arrow left" alt=""/>
-      <img src="../../../img/arrow.png" className="arrow right" alt=""/>
+      <ArrowBackIos
+        className="work-arrowLeft"
+        onClick={() => handleClick("left")}
+      />
+      <ArrowForwardIos
+        className="work-arrowRight"
+        onClick={() => handleClick()}
+      />
     </div>
   );
-};
-
-export default Works;
+}

@@ -7,6 +7,9 @@
   --bg-principal: #000;
   --bg-secondary: #333333;
   --bg-menuNav: white;
+  --bg-menuNav2: #333333;
+  --bg-topBar1: #c7bebe;
+  
 }
 .topbar {
   width: 100%;
@@ -34,6 +37,7 @@
   display: flex;
   align-items: center;
   margin-left: 30px;
+  color: var(--color-font);
 }
 .logo {
   font-size: var(--font-size-logo);
@@ -44,7 +48,7 @@
   text-shadow: -2px 4px 1px #767474;
 }
 .logo:hover{
-    color: var(--color-green);
+    color: var(--color-font);
     font-weight: 900;
 }
 
@@ -79,17 +83,21 @@
 }
 
 .active{
-    background-color: white;
+    background-color: var(--bg-topBar1);
     color: var(--color-orange);
 }
+
+.active .itemContainer{
+  color: #333333;
+}
 .active .hamburguer>span:first-child{
-    background-color: #000;
+    background-color: #fff;
     transform: rotate(45deg);
 }
 .active .hamburguer>span:nth-child(2){
     opacity: 0;
 }
 .active .hamburguer>span:last-child{
-    background-color: #000;
+    background-color: #fff;
     transform: rotate(-45deg);
 }

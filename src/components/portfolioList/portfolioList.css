@@ -7,6 +7,7 @@
     --bg-principal: #000;
     --bg-secondary: #333333;
     --bg-menuNav: white;
+    --bg-menuNav2: #333333;
   }
 .portfolioList{
     font-size: 14px;
@@ -18,7 +19,17 @@
     letter-spacing: .2em;
 }
 
+.portfolioList:hover{
+    color:var(--color-green);
+}
+
 .portfolioList.activePortfolio{
     color:var(--color-orange);
-    background-color: var(--bg-principal);
+    border-bottom: 3px ridge var(--color-orange);
+    background-color: transparent;
+}
+
+.portfolioList.activePortfolio:hover{
+    color:var(--color-green);
+    
 }

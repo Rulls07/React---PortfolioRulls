@@ -1,3 +1,15 @@
+:root {
+  --font-text: 1.5rem;
+  --font-size-logo: 40px;
+  --color-font: white;
+  --color-green: #bac964;
+  --color-orange: #ffa500;
+  --bg-principal: #000;
+  --bg-secondary: #333333;
+  --bg-menuNav: white;
+  --bg-menuNav2: #333333;
+  --color-font2: #464646;
+}
 .works {
   width: 100vw;
   height: calc(100vh - 70px);
@@ -10,7 +22,23 @@
   position: relative;
 }
 
-.sliderWorks {
+.work-arrowLeft {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 100px;
+  cursor: pointer;
+}
+.work-arrowRight {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 100px;
+  cursor: pointer;
+}
+.works .slider {
   height: 350px;
   display: flex;
   position: absolute;
@@ -18,67 +46,80 @@
   transition: all 1s ease-out;
 }
 
-.sliderWorks .containerSlider {
-  width: 100vh;
+.works .slider .container {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  color:#000;
 }
 
-.sliderItem {
+.works .slider .container .item {
   width: 700px;
   height: 100%;
-  border: 1px solid #fff;
+  background-color: #fff;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sliderItem .s-left {
+
+.works .slider .container .item .left {
   flex: 4;
-  height: 80%;
+  height: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sliderItem .s-left .leftContainer{
-    width: 90%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+.works .slider .container .item .left .leftContainer {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.sliderItem .s-left .leftContainer .imgContainer{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.works .slider .container .item .left .leftContainer .imgContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sliderItem .s-left .leftContainer .imgContainer img{
-    width: 25px;
-    height: 25px;
+.works .slider .container .item .left .leftContainer .imgContainer img {
+  width: 25px;
 }
 
-.sliderItem .s-left .leftContainer h2{
-   font-size: 20px;
+.works .slider .container .item .left .leftContainer h2 {
+  font-size: 20px;
+  color: var(--color-font2);
 }
-.sliderItem .s-left .leftContainer p{
-    font-size: 13px;
+
+.works .slider .container .item .left .leftContainer p {
+  font-size: 13px;
+  color: var(--color-font2);
 }
-.sliderItem .s-left .leftContainer span{
-    font-weight: 600;
-    font-size: 12px;
-    text-decoration: underline;
-    cursor: pointer;
+
+.works .slider .container .item .left .leftContainer span {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-font2);
+  
 }
-.sliderItem .s-right {
+
+.works .slider .container .item .left .leftContainer span .veilleTech {
+ color: inherit;
+  }
+  .works .slider .container .item .left .leftContainer span .veilleTech:hover {
+    color: var(--color-orange);
+     }
+
+.works .slider .container .item .right {
   flex: 8;
   height: 100%;
   display: flex;
@@ -87,20 +128,7 @@
   overflow: hidden;
 }
 
-.sliderItem .s-right img{
+.works .slider .container .item .right img {
   width: 400px;
   transform: rotate(-10deg);
-  overflow: hidden;
-  }
-
-  .arrow{
-      height: 50px;
-      position: absolute; 
-  }
-
-  .arrow .left{
-    left: 100px;
-}
-.arrow .right{
-    right: 100px;
 }
