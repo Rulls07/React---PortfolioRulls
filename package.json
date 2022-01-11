@@ -16,7 +16,7 @@
     "react-scripts": "^3.0.1",
     "web-vitals": "^2.1.3"
   },
-  "homepage": "https://hernandez.needemand.com/",
+  "homepage": "https://hernandez.needemand.com/build/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
