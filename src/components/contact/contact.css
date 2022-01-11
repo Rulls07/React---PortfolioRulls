@@ -3,7 +3,9 @@
   --font-size-logo: 40px;
   --color-font: white;
   --color-green: #bac964;
-  --color-orange: #ffa500;
+  --color-orange1: #FF7F00;
+  --color-orange2: #FFA500;
+  --color-orange:#E05216;
   --bg-principal: #000;
   --bg-secondary: #333333;
   --bg-menuNav: white;
@@ -73,7 +75,7 @@
     width: 150px;
     height: 50px;
     padding: 15px;
-    background-color: #bac964;
+    background-color: var(--color-orange);
     color: var(--color-font);
     border-radius: 30px;
     font-weight: 500;

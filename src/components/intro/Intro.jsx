@@ -19,9 +19,10 @@ export default function Intro() {
   return (
     <div className="intro" id="intro">
       <div className="left">
-        <div className="imgContainer">
+          <div className="i-bg"></div>
+        {/* <div className="imgContainer">
         <img src={Me} alt="Big Boss"/>
-        </div>
+        </div> */}
       </div>                                    {/* fin div Classname = "intro-left" */}
       <div className="right">
         <div className="wrapper">

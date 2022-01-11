@@ -99,7 +99,7 @@
     width: 150px;
     height: 50px;
     padding: 15px;
-    background-color: var(--color-green);
+    background-color: var(--color-orange);
     color: var(--color-font);
     border-radius: 30px;
     font-weight: 500;
@@ -126,5 +126,5 @@
 
 
   .btnDownloadCv:hover {
-    background-color: var(--color-green);
+    background-color: var(--color-orange1);
   }
