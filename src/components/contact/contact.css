@@ -68,7 +68,7 @@
 
   .formInput:focus, .formTextArea:focus{
     outline: none;
-	border-bottom: 2px solid #bac964;
+	  border-bottom: 2px solid var(--color-orange1);
 }
   .btnSend {
     border: none;
